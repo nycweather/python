@@ -1,0 +1,14 @@
+import string
+abcs=string.ascii_lowercase
+abcs=list(abcs)
+correct=[]
+def solution(word):
+  for x in range(len(word)):
+    if word[x] in abcs:
+      correct.append((abcs[(25-abcs.index(word[x]))]))
+    else:
+      correct.append(word[x])
+  return ''.join(correct)
+
+
+print(solution("Yvzs! I xzm'g yvorvev Lzmxv olhg srh qly zg gsv xlolmb!!"))
